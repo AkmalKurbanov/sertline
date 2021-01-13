@@ -1541,3 +1541,38 @@ select.form-control {
 .benefit-slides {
   margin-bottom: 50px;
 }
+
+.popup.size2 {
+  padding: 0 15px;
+      max-width: 450px;
+      width: 100%;
+      margin: auto;
+      position: relative;
+}
+
+.popup.size2 * {
+  text-align: center;
+}
+
+.popup__submit {
+  max-width: 350px;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  padding: 30px 15px;
+}
+.popup__submit .icon-checked {
+  color: green;
+  font-size: 100px;
+}
+.popup__submit .mfp-close {
+  position: absolute;
+  right: 0;
+}
+.form-group .disabled {
+  pointer-events: none;
+}

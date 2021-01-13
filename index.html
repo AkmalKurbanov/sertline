@@ -13,7 +13,7 @@
   <link rel="icon" href="assets\img\favicon.png" type="image/gif" sizes="16x16">
 
   <!-- Title-->
-  <title>Beborn | Responsive HTML5 template</title>
+  <title>SERTLINE</title>
 
   <!-- google fonts-->
   <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
@@ -27,7 +27,7 @@
   <link rel="stylesheet" href="assets\css\animate.min.css">
   <link rel="stylesheet" href="assets\css\style.css">
   <link rel="stylesheet" href="assets\css\color\default.css" id="theme-color">
-
+  <script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
 </head>
 
 <body id="top">
@@ -62,7 +62,7 @@
             <li><a href="#main-benefits">Сертификаты</a></li>
             <li><a href="#faq">Акции</a></li>
             <li><a href="#contact">Контакты</a></li>
-            <li><a href="https://wrapbootstrap.com/theme/beborn-multipurpose-landing-page-WB0245K45"
+            <li><a href="#callback"
                 class="btn-call-to-action">Позвонить</a></li>
           </ul>
         </div><!-- END collapse navbar-collapse -->
@@ -83,18 +83,25 @@
             </div>
           </div> <!-- END col-md-7 col-sm-6-->
           <div class="col-md-5 col-sm-6">
-            <form class="registration-form text-center" action="" method="POST" data-toggle="validator" role="form">
+            <form id="callback" class="registration-form text-center" action="" method="POST" data-toggle="validator" role="form">
+
+  <!-- Hidden Required Fields -->
+  <input type="hidden" name="project_name" value="Sertline">
+  <input type="hidden" name="admin_email" value="sertifikatline@gmail.com">
+  <input type="hidden" name="form_subject" value="Sertline">
+  <!-- END Hidden Required Fields -->
+
               <h4>оставить заяку</h4>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Полное имя" required="">
+                <input type="text" class="form-control" placeholder="Полное имя" name="Полное имя" required="">
               </div>
 
               <div class="form-group">
-                <input type="email" class="form-control" placeholder="Email" required="">
+                <input type="email" class="form-control" placeholder="Email" name="Email" required="">
               </div>
 
               <div class="form-group">
-                <button class="btn btn-block btn-theme ">отправить</button>
+                <button class="btn btn-block btn-theme" type="submit" id="submit">отправить</button>
               </div>
               <!-- <p class="reg-term">We won't spam you.</p> -->
             </form> <!-- END registration-form-->
@@ -464,30 +471,30 @@ sertifikatline@gmail.com">
             <ul class="list-inline">
               <li>
                 <a target="_blank"
-                  href="https://www.facebook.com/search/top?q=%D1%81%D0%B5%D1%80%D1%82%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%82%20%D0%BB%D0%B0%D0%B9%D0%BD"><i
+                  href="https://www.facebook.com/eleman.baitobetov.5"><i
                     class="fa fa-facebook"></i></a>
               </li>
               <li>
                 <a target="_blank"
-                  href="https://www.facebook.com/search/top?q=%D1%81%D0%B5%D1%80%D1%82%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%82%20%D0%BB%D0%B0%D0%B9%D0%BD"><i
+                  href="#"><i
                     class="fa fa-instagram"></i></a>
               </li>
 
               <li>
                 <a target="_blank"
-                  href="https://www.facebook.com/search/top?q=%D1%81%D0%B5%D1%80%D1%82%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%82%20%D0%BB%D0%B0%D0%B9%D0%BD">
+                  href="#">
                   <i class="fa fa-telegram"></i>
                 </a>
               </li>
               <li>
                 <a target="_blank"
-                  href="https://www.facebook.com/search/top?q=%D1%81%D0%B5%D1%80%D1%82%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%82%20%D0%BB%D0%B0%D0%B9%D0%BD">
+                  href="#">
                   <i class="fa fa-whatsapp"></i>
                 </a>
               </li>
               <li>
                 <a target="_blank"
-                  href="https://www.facebook.com/search/top?q=%D1%81%D0%B5%D1%80%D1%82%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%82%20%D0%BB%D0%B0%D0%B9%D0%BD">
+                  href="#">
                   <i class="fa fa-vk"></i>
                 </a>
               </li>
@@ -498,6 +505,11 @@ sertifikatline@gmail.com">
 
         <div class="col-md-6 col-md-offset-1 col-sm-6">
           <form action="contact.php" method="POST" class="contact-form" data-toggle="validator" role="form">
+              <!-- Hidden Required Fields -->
+              <input type="hidden" name="project_name" value="Sertline">
+              <input type="hidden" name="admin_email" value="sertifikatline@gmail.com">
+              <input type="hidden" name="form_subject" value="Sertline">
+              <!-- END Hidden Required Fields -->
             <div class="success-message"><i class="fa fa-check"></i> Message Sent </div>
             <div class="row">
               <div class="col-sm-6">
@@ -517,16 +529,14 @@ sertifikatline@gmail.com">
                   <input type="number" class="form-control" name="phone" placeholder="Телефон">
                 </div>
               </div>
-              <div class="col-sm-6">
-                <div class="form-group">
-                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
-                </div>
-              </div>
+              
             </div> <!-- END row-->
             <div class="form-group">
               <textarea class="form-control" name="message" placeholder="Сообщение" rows="8" required=""></textarea>
             </div>
-            <button class="btn btn-block btn-theme">отправить</button>
+            <div class="form-group">
+              <button class="btn btn-block btn-theme" type="submit" id="submit">отправить</button>
+            </div>
           </form>
         </div> <!-- END col-md-6 col-md-offset-1-->
       </div> <!-- END row-->
@@ -537,8 +547,8 @@ sertifikatline@gmail.com">
 
 
 
-
-  <section id="location-map" style="width:100%; height:450px;"></section>
+  <div id="map" style="width:100%; height:450px;"></div>
+  <!-- <section id="location-map" style="width:100%; height:450px;"></section> -->
 
 
 
@@ -582,30 +592,30 @@ sertifikatline@gmail.com">
                   <ul class="list-inline">
                     <li>
                       <a target="_blank"
-                        href="https://www.facebook.com/search/top?q=%D1%81%D0%B5%D1%80%D1%82%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%82%20%D0%BB%D0%B0%D0%B9%D0%BD"><i
+                        href="https://www.facebook.com/eleman.baitobetov.5"><i
                           class="fa fa-facebook"></i></a>
                     </li>
                     <li>
                       <a target="_blank"
-                        href="https://www.facebook.com/search/top?q=%D1%81%D0%B5%D1%80%D1%82%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%82%20%D0%BB%D0%B0%D0%B9%D0%BD"><i
+                        href="https://instagram.com/sertlinne?igshid=qu6y5ffl9jf5"><i
                           class="fa fa-instagram"></i></a>
                     </li>
 
                     <li>
                       <a target="_blank"
-                        href="https://www.facebook.com/search/top?q=%D1%81%D0%B5%D1%80%D1%82%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%82%20%D0%BB%D0%B0%D0%B9%D0%BD">
+                        href="">
                         <i class="fa fa-telegram"></i>
                       </a>
                     </li>
                     <li>
                       <a target="_blank"
-                        href="https://www.facebook.com/search/top?q=%D1%81%D0%B5%D1%80%D1%82%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%82%20%D0%BB%D0%B0%D0%B9%D0%BD">
+                        href="#">
                         <i class="fa fa-whatsapp"></i>
                       </a>
                     </li>
                     <li>
                       <a target="_blank"
-                        href="https://www.facebook.com/search/top?q=%D1%81%D0%B5%D1%80%D1%82%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%82%20%D0%BB%D0%B0%D0%B9%D0%BD">
+                        href="#">
                         <i class="fa fa-vk"></i>
                       </a>
                     </li>
@@ -769,7 +779,17 @@ sertifikatline@gmail.com">
   </div>
 
 
-
+<div class="popup size2 mfp-hide" id="submite">
+  <div class="popup__submit">
+    <h2>Спасибо</h2>
+    <i class="icon-checked"></i>
+    <h4>Наш менеджер свяжется с вами <br>в ближайшее время</h4>
+  </div>
+  <button title="Close (Esc)" type="button" class="mfp-close">
+    <i class="popup__close"></i>
+    <i class="popup__close"></i>
+  </button>
+</div>
 
   <!-- scripts-->
   <script src="assets\vendor\jquery\dist\jquery.min.js"></script>
@@ -787,164 +807,17 @@ sertifikatline@gmail.com">
   <script src="https://maps.googleapis.com/maps/api/js?&key=AIzaSyB0uuKeEkPfAo7EUINYPQs3bzXn7AabgJI"></script>
 
   <script>
-    /*
-====================
- Google map initialize
-==================== 
-*/
-    function initMap() {
+  
+      var map;
 
-      var myLatlng = new google.maps.LatLng(-37.817250, 144.959798);
-
-      var mapOptions = {
-        zoom: 12,
-        center: myLatlng,
-        mapTypeId: 'roadmap',
-        zoomControl: false,
-        scrollwheel: false,
-        styles: [{
-            "elementType": "geometry",
-            "stylers": [{
-              "color": "#f5f5f5"
-            }]
-          },
-          {
-            "elementType": "labels.icon",
-            "stylers": [{
-              "visibility": "off"
-            }]
-          },
-          {
-            "elementType": "labels.text.fill",
-            "stylers": [{
-              "color": "#616161"
-            }]
-          },
-          {
-            "elementType": "labels.text.stroke",
-            "stylers": [{
-              "color": "#f5f5f5"
-            }]
-          },
-          {
-            "featureType": "administrative.land_parcel",
-            "elementType": "labels.text.fill",
-            "stylers": [{
-              "color": "#bdbdbd"
-            }]
-          },
-          {
-            "featureType": "poi",
-            "elementType": "geometry",
-            "stylers": [{
-              "color": "#eeeeee"
-            }]
-          },
-          {
-            "featureType": "poi",
-            "elementType": "labels.text.fill",
-            "stylers": [{
-              "color": "#757575"
-            }]
-          },
-          {
-            "featureType": "poi.park",
-            "elementType": "geometry",
-            "stylers": [{
-              "color": "#e5e5e5"
-            }]
-          },
-          {
-            "featureType": "poi.park",
-            "elementType": "labels.text.fill",
-            "stylers": [{
-              "color": "#9e9e9e"
-            }]
-          },
-          {
-            "featureType": "road",
-            "elementType": "geometry",
-            "stylers": [{
-              "color": "#ffffff"
-            }]
-          },
-          {
-            "featureType": "road.arterial",
-            "elementType": "labels.text.fill",
-            "stylers": [{
-              "color": "#757575"
-            }]
-          },
-          {
-            "featureType": "road.highway",
-            "elementType": "geometry",
-            "stylers": [{
-              "color": "#dadada"
-            }]
-          },
-          {
-            "featureType": "road.highway",
-            "elementType": "labels.text.fill",
-            "stylers": [{
-              "color": "#616161"
-            }]
-          },
-          {
-            "featureType": "road.local",
-            "elementType": "labels.text.fill",
-            "stylers": [{
-              "color": "#9e9e9e"
-            }]
-          },
-          {
-            "featureType": "transit.line",
-            "elementType": "geometry",
-            "stylers": [{
-              "color": "#e5e5e5"
-            }]
-          },
-          {
-            "featureType": "transit.station",
-            "elementType": "geometry",
-            "stylers": [{
-              "color": "#eeeeee"
-            }]
-          },
-          {
-            "featureType": "water",
-            "elementType": "geometry",
-            "stylers": [{
-              "color": "#c9c9c9"
-            }]
-          },
-          {
-            "featureType": "water",
-            "elementType": "labels.text.fill",
-            "stylers": [{
-              "color": "#9e9e9e"
-            }]
-          }
-        ],
-      };
-
-      var map = new google.maps.Map(document.getElementById('location-map'), mapOptions);
-
-      // Map marker
-      var marker = new google.maps.Marker({
-        position: mapOptions.center,
-        icon: 'assets/img/map-marker.png',
-        map: map
+      DG.then(function () {
+        map = DG.map('map', {
+          center: [42.875844, 74.587163],
+          zoom: 17
+        });
+  DG.marker([42.875844, 74.587163]).addTo(map).bindPopup('пр.Чуй 164А 3 этаж 308 каб');
       });
-
-    }
-
-    initMap();
-
-
-    // $('.open-popup-link').magnificPopup({
-    //   type: 'inline',
-    //   midClick: true
-    // });
+ 
 
     $(document).ready(function () {
       $('.open-popup-link').magnificPopup({
@@ -972,10 +845,34 @@ sertifikatline@gmail.com">
 
 
 
-    $('.services_popup').magnificPopup({
-      type: 'inline',
-      midClick: true
-    });
+    // $('.services_popup').magnificPopup({
+    //   type: 'inline',
+    //   midClick: true
+    // });
+
+      //E-mail Ajax Send
+      $('form').submit(function () {
+      var th = $(this);
+      $.ajax({
+      type: "POST",
+      url: "mail.php",
+      data: th.serialize()
+      }).done(function () {
+      $.magnificPopup.open({
+      items: {
+      src: '#submite',
+      type: 'inline'
+      },
+      midClick: true,
+      closeMarkup: '<button title="%title%" type="button" class="mfp-close"></button>'
+      });
+      });
+      return false;
+      });
+
+
+
+
   </script>
 </body>
 
